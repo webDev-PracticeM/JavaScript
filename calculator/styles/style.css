@@ -2,3 +2,8 @@
     width: 400px;
     outline: auto black;
 }
+
+.calculator-display {
+    background-color: black;
+    color: white;
+}
