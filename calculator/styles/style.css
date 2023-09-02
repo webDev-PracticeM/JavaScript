@@ -6,4 +6,6 @@
 .calculator-display {
     background-color: black;
     color: white;
+    display: flex;
+    justify-content: end;
 }
