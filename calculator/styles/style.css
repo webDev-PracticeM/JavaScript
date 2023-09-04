@@ -36,3 +36,7 @@ button{
     border-radius: 12px;
     cursor: pointer;
 }
+
+.operator{
+    background-color: grey;
+}
