@@ -18,3 +18,10 @@
     font-size: 50px;
     font-weight: 200;
 }
+
+/*Buttons*/
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+}
