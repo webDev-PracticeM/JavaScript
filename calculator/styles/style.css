@@ -40,4 +40,5 @@ button{
 .operator{
     background-color: grey;
     color: white;
+    font-size: 30px;
 }
