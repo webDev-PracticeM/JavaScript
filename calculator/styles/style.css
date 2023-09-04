@@ -34,4 +34,5 @@ button{
     font-weight: 100;
     border: none;
     border-radius: 12px;
+    cursor: pointer;
 }
