@@ -40,7 +40,11 @@ button{
 
 .operator{
     background-color: grey;
-    color: white;
+}
+
+.operator,
+.equal-sign-operator{
+    color:white;
     font-size: 30px;
 }
 
@@ -51,7 +55,6 @@ button{
 
 .equal-sign-operator{
     background-color:rgb(18 206 87);
-    color: white;
     grid-column: -2;
     grid-row: 2/span 4;
 }
