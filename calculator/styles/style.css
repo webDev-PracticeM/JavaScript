@@ -51,4 +51,6 @@ button{
 
 .equal-sign-operator{
     background-color:rgb(18 206 87);
+    grid-column: -2;
+    grid-row: 2/span 4;
 }
