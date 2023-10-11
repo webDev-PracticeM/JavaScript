@@ -1,7 +1,7 @@
 const inputBtns = document.querySelectorAll('button');
 const calculator_display = document.querySelector('h1');
 
-let first_operand = 0;
+let first_operand = 32;
 let second_operand = 0;
 let operator_pressed = false;//flag for operator being pressed
 let operator = '';
@@ -40,6 +40,16 @@ function setOperator(a_operator){
     operator = a_operator;
 }
 
+/**set first operand's value */
+function setFirstOperand(){
+    if(!isOperand(first_operand)){
+        first_operand = calculator_display.textContent;
+    }
+    else{
+        return;
+    }
+}
+
 /**check if an operand value is set */
 function isOperand(an_operand){
     if(!an_operand){
@@ -59,10 +69,11 @@ function checkOperator(a_operator){
     console.log("value for operater_pressed after user pressed an operator: " + operator_pressed);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
-    console.log("is operand value set: " + isOperand(first_operand));
+    //set first_operand since an operator button was pressed
+    setFirstOperand(first_operand);
+    console.log("value of operand after checking if it is set: " + first_operand);
 }
 
-//TODO: assign first operand (make sure first operand's value is 0)
 //TODO: assign second operand, but make sure first operand != 0 && second operand == 0
 //TODO: calculate
 //TODO: allow decimals
