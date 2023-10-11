@@ -26,10 +26,20 @@ function isOperatorPressed(){
     }
 }
 
+/**set operator_pressed to either true or false */
+function setOperatorPressed(is_pressed){
+    if(!is_pressed){
+        operator_pressed = true;
+    }
+}
+
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    const pressed = isOperatorPressed();
+    const is_pressed = isOperatorPressed();
+    console.log("value before an operator pressed: " + is_pressed);
     console.log(a_operator);
+    setOperatorPressed(is_pressed);
+    console.log(operator_pressed);
 
 }
 
