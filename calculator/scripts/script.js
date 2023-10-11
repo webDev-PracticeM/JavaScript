@@ -18,12 +18,7 @@ function displayValue(a_value){
 
 /**return value of operator_pressed */
 function isOperatorPressed(){
-    if(operator_pressed){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return operator_pressed;
 }
 
 /**set operator_pressed to either true or false
