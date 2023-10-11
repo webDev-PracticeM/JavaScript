@@ -44,6 +44,7 @@ function checkOperator(a_operator){
 //TODO: assign first operand (make sure first operand's value is 0)
 //TODO: assign second operand, but make sure first operand != 0 && second operand == 0
 //TODO: calculate
+//TODO: allow decimals
 
 inputBtns.forEach((inputBtn) =>{
     if(Number(inputBtn.value) >= 0 && Number(inputBtn.value) <= 9){
