@@ -33,11 +33,10 @@ function setOperatorPressed(is_pressed){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    const is_pressed = isOperatorPressed();
-    console.log("value before an operator pressed: " + is_pressed);
+    // console.log("value before an operator pressed: " + operator_pressed);
+    setOperatorPressed(isOperatorPressed());
     console.log(a_operator);
-    setOperatorPressed(is_pressed);
-    console.log(operator_pressed);
+    console.log("value for operater_pressed after user pressed an operator: " + operator_pressed);
 
 }
 
