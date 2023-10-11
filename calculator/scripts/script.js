@@ -4,6 +4,7 @@ const calculator_display = document.querySelector('h1');
 let first_operand = 0;
 let second_operand = 0;
 let operator_pressed = false;//flag for operator being pressed
+let operator = '';
 
 
 /** Display the value*/
