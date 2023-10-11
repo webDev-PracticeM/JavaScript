@@ -22,13 +22,16 @@ function isOperatorPressed(){
     return operator_pressed;
 }
 
-/**set operator_pressed to either true or false
+/**set operator_pressed
  * true: if an operator button was pressed
- * false: no operator button pressed
+ * return it's default value: if no operator was pressed
  */
 function setOperatorPressed(is_pressed){
     if(!is_pressed){
         operator_pressed = true;
+    }
+    else{
+        return operator_pressed;
     }
 }
 
