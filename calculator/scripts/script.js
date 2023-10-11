@@ -40,6 +40,17 @@ function setOperator(a_operator){
     operator = a_operator;
 }
 
+/**check if an operand value is set */
+function isOperand(an_operand){
+    if(!an_operand){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
+
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
     // console.log("value before an operator pressed: " + operator_pressed);
@@ -48,6 +59,7 @@ function checkOperator(a_operator){
     console.log("value for operater_pressed after user pressed an operator: " + operator_pressed);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
+    console.log("is operand value set: " + isOperand(first_operand));
 }
 
 //TODO: assign first operand (make sure first operand's value is 0)
