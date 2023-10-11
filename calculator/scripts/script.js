@@ -16,6 +16,7 @@ function displayValue(a_value){
     }
 }
 
+/**return value of operator_pressed */
 function isOperatorPressed(){
     if(operator_pressed){
         return true;
