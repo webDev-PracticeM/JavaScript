@@ -26,7 +26,10 @@ function isOperatorPressed(){
     }
 }
 
-/**set operator_pressed to either true or false */
+/**set operator_pressed to either true or false
+ * true: if an operator button was pressed
+ * false: no operator button pressed
+ */
 function setOperatorPressed(is_pressed){
     if(!is_pressed){
         operator_pressed = true;
