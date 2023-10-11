@@ -27,7 +27,7 @@ function isOperatorPressed(){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    isOperatorPressed();
+    const pressed = isOperatorPressed();
     console.log(a_operator);
 
 }
