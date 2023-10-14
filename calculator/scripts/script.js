@@ -53,6 +53,10 @@ function setFirstOperand(){
         first_operand = Number(calculator_display.textContent);
         nextOperand = true;
     }
+    else{
+        setSecondOperand();
+        console.log("value of second_operand " + second_operand);
+    }
 }
 
 /**set second operand's value */
@@ -87,7 +91,7 @@ function checkOperator(a_operator){
     console.log("value set for operator is: " + operator);
     //set first_operand since an operator button was pressed
     setFirstOperand();
-    console.log("value of operand after checking if it is set: " + first_operand);
+    console.log("value of first operand after checking if it is set: " + first_operand);
     
 }
 
