@@ -97,8 +97,6 @@ function checkOperator(a_operator){
     
 }
 
-//TODO: assign second operand, but make sure first operand != 0 && second operand == 0
-//TODO: if an expresson with 2 numbers, assign second operand when needing to do calculation
 //TODO: calculate
 //TODO: allow decimals
 
