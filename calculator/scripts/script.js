@@ -53,10 +53,14 @@ function setFirstOperand(){
         first_operand = calculator_display.textContent;
         nextOperand = true;
     }
-    // 
-    // else if(!isOperand(second_operand)){
-    //     second_operand = calculator_display.textContent;
-    // }
+}
+
+/**set second operand's value */
+function setSecondOperand(){
+    if(!isOperand(second_operand)){
+        second_operand = calculator_display.textContent;
+        nextOperand = false;
+    }
 }
 
 /**check if an operand value is set */
@@ -81,7 +85,7 @@ function checkOperator(a_operator){
     //set first_operand since an operator button was pressed
     setFirstOperand();
     console.log("value of operand after checking if it is set: " + first_operand);
-    // console.log("value of second operand: " + second_operand);
+    
 }
 
 //TODO: assign second operand, but make sure first operand != 0 && second operand == 0
