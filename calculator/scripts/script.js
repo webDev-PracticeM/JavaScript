@@ -50,7 +50,7 @@ function setOperator(a_operator){
 /**set first operand's value */
 function setFirstOperand(){
     if(!isOperand(first_operand)){
-        first_operand = calculator_display.textContent;
+        first_operand = Number(calculator_display.textContent);
         nextOperand = true;
     }
 }
@@ -58,7 +58,7 @@ function setFirstOperand(){
 /**set second operand's value */
 function setSecondOperand(){
     if(!isOperand(second_operand)){
-        second_operand = calculator_display.textContent;
+        second_operand = Number(calculator_display.textContent);
         nextOperand = false;
     }
 }
