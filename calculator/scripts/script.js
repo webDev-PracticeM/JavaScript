@@ -63,7 +63,10 @@ function setSecondOperand(){
     }
 }
 
-/**check if an operand value is set */
+/**check if an operand value is set 
+ * true: if an_operand has a value
+ * false: if an_operand does not have a value
+*/
 function isOperand(an_operand){
     if(!an_operand){
         return false;
