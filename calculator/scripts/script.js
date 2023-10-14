@@ -31,15 +31,12 @@ function isOperatorPressed(){
 
 /**set operator_pressed
  * true: if an operator button was pressed
- * false: to reset operator_pressed flag
  */
 function setOperatorPressed(is_pressed){
     if(!is_pressed){
         operator_pressed = true;
     }
-    else{
-        operator_pressed = false;
-    }
+    
 }
 
 /**set operator's value to operator pressed*/
