@@ -77,12 +77,24 @@ function isOperand(an_operand){
     }
 }
 
+/** check if multiple operators were pressed at once
+ * true: if multiple operators were pressed
+ * false: no operator was pressed yet
+*/
+function isMultipleOperators(){
+    if(operator && nextOperand){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
     //prevent mutliple operators
-    if(operator && nextOperand){
-        operator = a_operator;
+    const multipleOperators = isMultipleOperators();
+    if(multipleOperators){
         return;
     }
     // console.log("value before an operator pressed: " + operator_pressed);
