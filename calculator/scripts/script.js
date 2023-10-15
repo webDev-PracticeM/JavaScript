@@ -3,7 +3,6 @@ const calculator_display = document.querySelector('h1');
 
 let first_operand = 0;
 let second_operand = 0;
-let operator_pressed = false;//flag for operator being pressed
 let operator = '';
 let nextOperand = false;//flag for waiting for the next operand
 
@@ -22,21 +21,6 @@ function displayValue(a_value){
             calculator_display.textContent += a_value;
         }
     } 
-}
-
-/**return value of operator_pressed */
-function isOperatorPressed(){
-    return operator_pressed;
-}
-
-/**set operator_pressed
- * true: if an operator button was pressed
- */
-function setOperatorPressed(is_pressed){
-    if(!is_pressed){
-        operator_pressed = true;
-    }
-    
 }
 
 /**set operator's value to operator pressed*/
@@ -97,10 +81,8 @@ function checkOperator(a_operator){
     if(multipleOperators){
         return;
     }
-    // console.log("value before an operator pressed: " + operator_pressed);
-    setOperatorPressed(isOperatorPressed());
+    
     console.log(a_operator);
-    console.log("value for operater_pressed after user pressed an operator: " + operator_pressed);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
     //set first_operand since an operator button was pressed
