@@ -104,7 +104,7 @@ inputBtns.forEach((inputBtn) =>{
     if(Number(inputBtn.value) >= 0 && Number(inputBtn.value) <= 9){
         inputBtn.addEventListener('click', () => displayValue(inputBtn.value));
     }
-    else if (inputBtn.className === 'operator'){
+    else if (inputBtn.classList.contains('operator')){
         inputBtn.addEventListener('click', () => checkOperator(inputBtn.value));
     }
     
