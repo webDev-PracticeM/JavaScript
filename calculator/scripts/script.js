@@ -88,10 +88,19 @@ function checkOperator(a_operator){
     //set first_operand since an operator button was pressed
     setFirstOperand();
     console.log("value of first operand after checking if it is set: " + first_operand);
+    calculate();
     
 }
 
 //TODO: calculate
+function calculate(){
+    let calculated_value = 0;
+    switch(operator){
+        case '+':
+            calculated_value = second_operand + first_operand;
+            calculator_display.textContent = calculated_value;
+    }
+}
 //TODO: allow decimals
 
 inputBtns.forEach((inputBtn) =>{
