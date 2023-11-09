@@ -76,16 +76,15 @@ function isMultipleOperators(){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    //set first_operand since an operator button was pressed
-    setFirstOperand();
-    console.log("value of first operand after checking if it is set: " + first_operand);
     //prevent mutliple operators
     const multipleOperators = isMultipleOperators();
     if(multipleOperators){
         setOperator(a_operator);
         return;
     }
-    
+    //set first_operand since an operator button was pressed
+    setFirstOperand();
+    console.log("value of first operand after checking if it is set: " + first_operand);
     console.log(a_operator);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
