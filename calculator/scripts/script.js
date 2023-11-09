@@ -79,6 +79,7 @@ function checkOperator(a_operator){
     //prevent mutliple operators
     const multipleOperators = isMultipleOperators();
     if(multipleOperators){
+        setOperator(a_operator);
         return;
     }
     
