@@ -80,14 +80,14 @@ function isOperand(an_operand){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    //set first_operand since an operator button was pressed
-    setFirstOperand();
-    console.log("value of first operand after checking if it is set: " + first_operand);
     //prevent mutliple operators
     if(operator && nextOperand){
         operator = a_operator;
         return;
     }
+    //set first_operand since an operator button was pressed
+    setFirstOperand();
+    console.log("value of first operand after checking if it is set: " + first_operand);
     // console.log("value before an operator pressed: " + operator_pressed);
     setOperatorPressed(isOperatorPressed());
     console.log(a_operator);
