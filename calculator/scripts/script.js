@@ -109,6 +109,18 @@ function calculate(){
             calculator_display.textContent = calculated_value;
             first_operand = Number(calculator_display.textContent);
             break;
+
+        case '-':
+            if(second_operand > first_operand){
+                calculated_value =  second_operand - first_operand;
+                calculator_display.textContent = calculated_value;
+                first_operand = Number(calculator_display.textContent);
+            }
+            else{
+                calculated_value = first_operand - second_operand;
+                calculator_display.textContent = calculated_value;
+                first_operand = Number(calculator_display.textContent);
+            }
     }
 }
 //TODO: allow decimals
