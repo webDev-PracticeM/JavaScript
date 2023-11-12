@@ -25,8 +25,8 @@ function displayValue(a_value){
 
 /**set operator's value to operator pressed*/
 function setOperator(a_operator){
-    //if operator is "=" do not need to assign operator
-    if(!operator == '='){
+    //only assign operator when it is not '='
+    if(!(a_operator == '=')){
         operator = a_operator;
     }
     else{
