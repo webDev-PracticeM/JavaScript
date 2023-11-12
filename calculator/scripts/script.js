@@ -96,6 +96,7 @@ function checkOperator(a_operator){
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
     calculate();
+    console.log("first_operand value for continued math expression " + first_operand);
     
 }
 
@@ -106,6 +107,8 @@ function calculate(){
         case '+':
             calculated_value = second_operand + first_operand;
             calculator_display.textContent = calculated_value;
+            first_operand = Number(calculator_display.textContent);
+            break;
     }
 }
 //TODO: allow decimals
