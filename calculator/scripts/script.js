@@ -83,7 +83,7 @@ function isMultipleOperators(){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    //prevent mutliple operators
+    //prevent from assigning the last operand to the next b/c of pressing mutliple operators
     const multipleOperators = isMultipleOperators();
     if(multipleOperators){
         setOperator(a_operator);
