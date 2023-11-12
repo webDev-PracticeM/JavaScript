@@ -25,8 +25,8 @@ function displayValue(a_value){
 
 /**set operator's value to operator pressed*/
 function setOperator(a_operator){
-    //if operator is "=" do not need to assign operator
-    if(!operator == '='){
+    //only assign operator when it is not '='
+    if(!(a_operator == '=')){
         operator = a_operator;
     }
     else{
@@ -83,7 +83,7 @@ function isMultipleOperators(){
 
 /**Determine which operator is being pressed */
 function checkOperator(a_operator){
-    //prevent mutliple operators
+    //prevent from assigning the last operand to the next b/c of pressing mutliple operators
     const multipleOperators = isMultipleOperators();
     if(multipleOperators){
         setOperator(a_operator);
