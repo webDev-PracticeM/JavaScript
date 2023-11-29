@@ -121,18 +121,10 @@ function calculate(){
             break;
 
         case '-':
-            if(second_operand > first_operand){
-                calculated_value =  second_operand - first_operand;
-                calculator_display.textContent = calculated_value;
-                first_operand = Number(calculator_display.textContent);
-                setNextOperand(true);
-            }
-            else{
-                calculated_value = first_operand - second_operand;
-                calculator_display.textContent = calculated_value;
-                first_operand = Number(calculator_display.textContent);
-                setNextOperand(true);
-            }
+            calculated_value =  first_operand - second_operand;
+            calculator_display.textContent = calculated_value;
+            first_operand = Number(calculator_display.textContent);
+            setNextOperand(true);
     }
 }
 //TODO: allow decimals
