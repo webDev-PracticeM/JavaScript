@@ -91,7 +91,7 @@ function checkOperator(a_operator){
         setNextOperand(true);
     }
     else{
-        setNextOperand(true);
+        // setNextOperand(true);
         setSecondOperand();
         console.log("value of second operand " + second_operand);
         setNextOperand(false);
@@ -117,6 +117,7 @@ function calculate(){
             calculated_value = second_operand + first_operand;
             calculator_display.textContent = calculated_value;
             first_operand = Number(calculator_display.textContent);
+            setNextOperand(true);
             break;
 
         case '-':
@@ -124,11 +125,13 @@ function calculate(){
                 calculated_value =  second_operand - first_operand;
                 calculator_display.textContent = calculated_value;
                 first_operand = Number(calculator_display.textContent);
+                setNextOperand(true);
             }
             else{
                 calculated_value = first_operand - second_operand;
                 calculator_display.textContent = calculated_value;
                 first_operand = Number(calculator_display.textContent);
+                setNextOperand(true);
             }
     }
 }
