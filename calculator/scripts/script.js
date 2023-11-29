@@ -87,18 +87,20 @@ function checkOperator(a_operator){
     //set operand since an operator button was pressed
     if(!isOperand(first_operand)){
         setFirstOperand();
+        console.log("value of first operand after checking if it is set: " + first_operand);
         setNextOperand(true);
     }
     else{
         setNextOperand(true);
         setSecondOperand();
+        console.log("value of second operand " + second_operand);
         setNextOperand(false);
             
     }
     
-    console.log("value of first operand after checking if it is set: " + first_operand);
+    
     // console.log("value before an operator pressed: " + operator_pressed);
-    console.log("value of second operand " + second_operand);
+    
     console.log(a_operator);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
