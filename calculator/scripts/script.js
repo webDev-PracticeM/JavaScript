@@ -54,6 +54,23 @@ function setSecondOperand(){
     second_operand = Number(calculator_display.textContent);
 }
 
+/**set an operand's value */
+function setOperand(){
+    //set operand since an operator button was pressed
+   if(!isOperand(first_operand)){
+    setFirstOperand();
+    console.log("value of first operand after checking if it is set: " + first_operand);
+    setNextOperand(true);
+    }
+    else{
+        //since first operand already set, set the second operand's value
+        setSecondOperand();
+        console.log("value of second operand " + second_operand);
+        setNextOperand(false);
+            
+    } 
+}
+
 /**Set nextOperand's value */
 function setNextOperand(b_value){
     nextOperand = b_value;
@@ -80,21 +97,11 @@ function checkOperator(a_operator){
         operator = a_operator;
         return;
     }
-    //set operand since an operator button was pressed
-    if(!isOperand(first_operand)){
-        setFirstOperand();
-        setNextOperand(true);
-    }
-    else{
-        setNextOperand(true);
-        setSecondOperand();
-        setNextOperand(false);
-            
-    }
-    
-    console.log("value of first operand after checking if it is set: " + first_operand);
+    setOperand();
+   
+    //console.log("value of first operand after checking if it is set: " + first_operand);
     // console.log("value before an operator pressed: " + operator_pressed);
-    console.log("value of second operand " + second_operand);
+    //console.log("value of second operand " + second_operand);
     setOperatorPressed(isOperatorPressed());
     console.log(a_operator);
     console.log("value for operater_pressed after user pressed an operator: " + operator_pressed);
