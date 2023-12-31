@@ -102,11 +102,7 @@ function checkOperator(a_operator){
         return;
     }
     setOperand();
-   
-    //console.log("value of first operand after checking if it is set: " + first_operand);
-    // console.log("value before an operator pressed: " + operator_pressed);
-    //console.log("value of second operand " + second_operand);
-    setOperatorPressed(isOperatorPressed());
+    
     console.log(a_operator);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
