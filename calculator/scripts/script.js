@@ -62,7 +62,10 @@ function setOperand(){
     } 
 }
 
-/**Set nextOperand's value */
+/**Set nextOperand flag value 
+ * true: if waiting to receive second operand
+ * false: otherwise
+*/
 function setNextOperand(b_value){
     nextOperand = b_value;
 }
