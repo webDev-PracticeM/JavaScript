@@ -148,6 +148,13 @@ function calculate(){
             setFirstOperand();
             setNextOperand(true);
             break;
+
+        case '/':
+            calculated_value =  first_operand / second_operand;
+            displayValue(calculated_value);
+            setFirstOperand();
+            setNextOperand(true);
+            break;
     }
 }
 //TODO: allow decimals
