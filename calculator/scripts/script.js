@@ -6,6 +6,7 @@ let second_operand = -1;
 let operator_pressed = false;//flag for operator being pressed
 let operator = '';
 let nextOperand = false;//flag for waiting for the next operand
+let calculating = false;//flag for determining if calculate was called
 
 
 /** Display the value*/
@@ -15,7 +16,7 @@ function displayValue(a_value){
         nextOperand = false;
     }
     else{
-        if(calculator_display.textContent === '0'){
+        if(calculator_display.textContent === '0' || calculating){
             calculator_display.textContent = a_value;
         }
         else{
@@ -125,24 +126,25 @@ function checkOperator(a_operator){
 //TODO: calculate
 function calculate(){
     let calculated_value = 0;
+    calculating = true;
     switch(operator){
         case '+':
             calculated_value = second_operand + first_operand;
-            calculator_display.textContent = calculated_value;
+            displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
             break;
 
         case '-':
             calculated_value =  first_operand - second_operand;
-            calculator_display.textContent = calculated_value;
+            displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
             break;
         
         case '*':
             calculated_value =  first_operand * second_operand;
-            calculator_display.textContent = calculated_value;
+            displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
             break;
