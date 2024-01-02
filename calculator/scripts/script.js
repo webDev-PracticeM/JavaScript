@@ -1,8 +1,8 @@
 const inputBtns = document.querySelectorAll('button');
 const calculator_display = document.querySelector('h1');
 
-let first_operand = 0;
-let second_operand = 0;
+let first_operand = -1;
+let second_operand = -1;
 let operator_pressed = false;//flag for operator being pressed
 let operator = '';
 let nextOperand = false;//flag for waiting for the next operand
@@ -84,7 +84,7 @@ function setNextOperand(b_value){
  * false: if an_operand does not have a value
 */
 function isOperand(an_operand){
-    if(!an_operand){
+    if(an_operand < 0){
         return false;
     }
     else{
