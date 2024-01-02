@@ -158,6 +158,7 @@ function calculate(){
     }
 }
 //TODO: allow decimals
+//TODO: clear button feature
 
 inputBtns.forEach((inputBtn) =>{
     if(Number(inputBtn.value) >= 0 && Number(inputBtn.value) <= 9){
