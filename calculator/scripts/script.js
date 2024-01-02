@@ -110,7 +110,14 @@ function checkOperator(a_operator){
     console.log(a_operator);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
-    calculate();
+
+    //only calculate once second operand has been set
+    if(!isOperand(second_operand)){
+        return;
+    }
+    else{
+        calculate();
+    }
     console.log("first_operand value for continued math expression " + first_operand);
     
 }
