@@ -129,21 +129,21 @@ function calculate(){
         case '+':
             calculated_value = second_operand + first_operand;
             calculator_display.textContent = calculated_value;
-            first_operand = Number(calculator_display.textContent);
+            setFirstOperand();
             setNextOperand(true);
             break;
 
         case '-':
             calculated_value =  first_operand - second_operand;
             calculator_display.textContent = calculated_value;
-            first_operand = Number(calculator_display.textContent);
+            setFirstOperand();
             setNextOperand(true);
             break;
         
         case '*':
             calculated_value =  first_operand * second_operand;
             calculator_display.textContent = calculated_value;
-            first_operand = Number(calculator_display.textContent);
+            setFirstOperand();
             setNextOperand(true);
             break;
     }
