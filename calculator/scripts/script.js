@@ -138,6 +138,14 @@ function calculate(){
             calculator_display.textContent = calculated_value;
             first_operand = Number(calculator_display.textContent);
             setNextOperand(true);
+            break;
+        
+        case '*':
+            calculated_value =  first_operand * second_operand;
+            calculator_display.textContent = calculated_value;
+            first_operand = Number(calculator_display.textContent);
+            setNextOperand(true);
+            break;
     }
 }
 //TODO: allow decimals
