@@ -158,6 +158,9 @@ function calculate(){
     }
 }
 //TODO: allow decimals
+function addDecimal(){
+    console.log("decimal pressed");
+}
 //TODO: clear button feature
 
 inputBtns.forEach((inputBtn) =>{
@@ -166,6 +169,9 @@ inputBtns.forEach((inputBtn) =>{
     }
     else if (inputBtn.classList.contains('operator')){
         inputBtn.addEventListener('click', () => checkOperator(inputBtn.value));
+    }
+    else if(inputBtn.classList.contains('decimal')){
+        inputBtn.addEventListener('click', () => addDecimal());
     }
     
 });
