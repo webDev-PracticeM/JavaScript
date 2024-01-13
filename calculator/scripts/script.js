@@ -160,6 +160,9 @@ function calculate(){
 //TODO: allow decimals
 function addDecimal(){
     console.log("decimal pressed");
+    if(!calculator_display.textContent.includes('.')){
+        calculator_display.textContent = `${calculator_display.textContent}.`;
+    }
 }
 //TODO: clear button feature
 
