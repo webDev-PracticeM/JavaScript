@@ -159,7 +159,10 @@ function calculate(){
 }
 //TODO: allow decimals
 function addDecimal(){
-    console.log("decimal pressed");
+     //if waiting on nextOperand, do not add decimal yet
+     if(nextOperand){
+        return
+    }
     if(!calculator_display.textContent.includes('.')){
         calculator_display.textContent = `${calculator_display.textContent}.`;
     }
