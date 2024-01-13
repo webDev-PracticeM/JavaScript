@@ -123,6 +123,14 @@ function checkOperator(a_operator){
     
 }
 
+/**set calculate flag
+ * true: if in the process of calculating
+ * false: no calculation being done
+ */
+function setCalculateFlag(bool_val){
+    calculating = bool_val;
+}
+
 //TODO: calculate
 function calculate(){
     let calculated_value = 0;
@@ -133,6 +141,7 @@ function calculate(){
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
+            setCalculateFlag(false);
             break;
 
         case '-':
@@ -140,6 +149,7 @@ function calculate(){
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
+            setCalculateFlag(false);
             break;
         
         case '*':
@@ -147,6 +157,7 @@ function calculate(){
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
+            setCalculateFlag(false);
             break;
 
         case '/':
@@ -154,6 +165,7 @@ function calculate(){
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
+            setCalculateFlag(false);
             break;
     }
 }
