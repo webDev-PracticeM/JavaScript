@@ -158,6 +158,7 @@ function calculate(){
             setFirstOperand();
             setNextOperand(true);
             setCalculateFlag(false);
+            //TODO: round answer to thousandths place
             break;
 
         case '/':
@@ -166,6 +167,7 @@ function calculate(){
             setFirstOperand();
             setNextOperand(true);
             setCalculateFlag(false);
+            //TODO: round answer to thousandths place
             break;
     }
 }
