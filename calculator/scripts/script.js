@@ -1,5 +1,6 @@
-const inputBtns = document.querySelectorAll('button');
+const inputBtns = document.querySelectorAll('button');//has to have a value attribute
 const calculator_display = document.querySelector('h1');
+const clearBtn = document.getElementById('clear-btn');
 
 let first_operand = -1;
 let second_operand = -1;
@@ -218,7 +219,14 @@ function addDecimal(){
         calculator_display.textContent = `${calculator_display.textContent}.`;
     }
 }
-//TODO: clear button feature
+
+/**
+ * clears calculator for new calculation
+ */
+function clearAll(){
+    console.log("clear all function called");
+
+}
 
 inputBtns.forEach((inputBtn) =>{
     if(Number(inputBtn.value) >= 0 && Number(inputBtn.value) <= 9){
@@ -232,3 +240,5 @@ inputBtns.forEach((inputBtn) =>{
     }
     
 });
+
+clearBtn.addEventListener('click', clearAll);
