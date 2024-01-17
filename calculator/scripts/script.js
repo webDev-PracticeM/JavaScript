@@ -224,7 +224,10 @@ function addDecimal(){
  * clears calculator for new calculation
  */
 function clearAll(){
-    console.log("clear all function called");
+    calculator_display.textContent = 0;
+    first_operand = -1;
+    second_operand = -1;
+    operator = '';
 
 }
 
