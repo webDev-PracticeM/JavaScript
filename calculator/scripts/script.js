@@ -150,7 +150,9 @@ function threeDecimalPlcs(aNumber){
     return Math.round(aNumber * 1000) / 1000;
 }
 
-//TODO: calculate
+/**
+ * does basic math functions depending on which operator button was pressed
+ */
 function calculate(){
     let calculated_value = 0;
     calculating = true;
