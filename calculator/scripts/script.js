@@ -131,6 +131,18 @@ function setCalculateFlag(bool_val){
     calculating = bool_val;
 }
 
+/**
+ * check if calculated value is a decimal
+ */
+function isDecimal(aNumber){
+    if(aNumber % 1 != 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 //TODO: calculate
 function calculate(){
     let calculated_value = 0;
