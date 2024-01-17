@@ -107,7 +107,6 @@ function checkOperator(a_operator){
         return;
     }
     setOperand();
-    
     console.log(a_operator);
     setOperator(a_operator);
     console.log("value set for operator is: " + operator);
