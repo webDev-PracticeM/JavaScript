@@ -131,6 +131,18 @@ function setCalculateFlag(bool_val){
     calculating = bool_val;
 }
 
+/**
+ * check if calculated value is a decimal
+ */
+function isDecimal(aNumber){
+    if(aNumber % 1 != 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 //TODO: calculate
 function calculate(){
     let calculated_value = 0;
@@ -171,7 +183,19 @@ function calculate(){
             break;
     }
 }
-//TODO: allow decimals
+/**
+ * adds a decimal to an operand
+ * @returns to click listener
+ */
+function addDecimal(){
+     //if waiting on nextOperand, do not add decimal yet
+     if(nextOperand){
+        return
+    }
+    if(!calculator_display.textContent.includes('.')){
+        calculator_display.textContent = `${calculator_display.textContent}.`;
+    }
+}
 //TODO: clear button feature
 
 inputBtns.forEach((inputBtn) =>{
@@ -180,6 +204,9 @@ inputBtns.forEach((inputBtn) =>{
     }
     else if (inputBtn.classList.contains('operator')){
         inputBtn.addEventListener('click', () => checkOperator(inputBtn.value));
+    }
+    else if(inputBtn.classList.contains('decimal')){
+        inputBtn.addEventListener('click', () => addDecimal());
     }
     
 });
