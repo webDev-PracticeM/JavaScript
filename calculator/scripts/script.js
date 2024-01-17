@@ -143,6 +143,13 @@ function isDecimal(aNumber){
     }
 }
 
+/**
+ * round decimal to three decimal places
+ */
+function threeDecimalPlcs(aNumber){
+    return Math.round(aNumber * 1000) / 1000;
+}
+
 //TODO: calculate
 function calculate(){
     let calculated_value = 0;
@@ -150,6 +157,10 @@ function calculate(){
     switch(operator){
         case '+':
             calculated_value = second_operand + first_operand;
+            if(isDecimal(calculated_value)){
+                calculated_value = threeDecimalPlcs(calculated_value);
+                
+            }
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
@@ -158,6 +169,10 @@ function calculate(){
 
         case '-':
             calculated_value =  first_operand - second_operand;
+            if(isDecimal(calculated_value)){
+                calculated_value = threeDecimalPlcs(calculated_value);
+                
+            }
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
@@ -166,20 +181,26 @@ function calculate(){
         
         case '*':
             calculated_value =  first_operand * second_operand;
+            if(isDecimal(calculated_value)){
+                calculated_value = threeDecimalPlcs(calculated_value);
+                
+            }
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
             setCalculateFlag(false);
-            //TODO: round answer to thousandths place
             break;
 
         case '/':
             calculated_value =  first_operand / second_operand;
+            if(isDecimal(calculated_value)){
+                calculated_value = threeDecimalPlcs(calculated_value);
+                
+            }
             displayValue(calculated_value);
             setFirstOperand();
             setNextOperand(true);
             setCalculateFlag(false);
-            //TODO: round answer to thousandths place
             break;
     }
 }
