@@ -169,7 +169,10 @@ function calculate(){
             break;
     }
 }
-//TODO: allow decimals
+/**
+ * adds a decimal to an operand
+ * @returns to click listener
+ */
 function addDecimal(){
      //if waiting on nextOperand, do not add decimal yet
      if(nextOperand){
