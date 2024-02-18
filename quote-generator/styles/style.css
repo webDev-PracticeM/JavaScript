@@ -40,5 +40,6 @@ body{
 .quote-author{
     font-size: 32px;
     font-weight: 400;
+    margin-top: 15px;
     font-style: italic;
 }
