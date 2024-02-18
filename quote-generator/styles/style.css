@@ -51,4 +51,5 @@ body{
 button{
     color: white;
     background-color: #333333;
+    padding: 8px 24px;
 }
