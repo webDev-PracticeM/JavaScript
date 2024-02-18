@@ -36,3 +36,8 @@ body{
 .fa-quote-left{
     font-size: 4rem;
 }
+
+.quote-author{
+    font-size: 32px;
+    font-weight: 400;
+}
