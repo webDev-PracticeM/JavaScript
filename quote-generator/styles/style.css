@@ -19,7 +19,6 @@ body{
     width: auto;
     max-width: 900px;
     background-color: aqua;
-    border-radius: 10px;
     box-shadow: 0 10px 10px 10px rgba(0, 153, 153, 0.5);
     padding: 20px 30px;
     color:black;
@@ -51,4 +50,8 @@ button{
     color: white;
     background-color: #333333;
     padding: 8px 24px;
+}
+
+.quote-container, button{
+    border-radius: 10px;
 }
