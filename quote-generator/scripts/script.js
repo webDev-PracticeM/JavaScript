@@ -1,4 +1,7 @@
 const newQuoteBtn = document.getElementById('quote-btn');
+const quoteText = document.getElementById('quote');
+const quoteAuthor = document.getElementById('author');
+
 let apiQuotes = [];
 
 /**Get quotes from API */
@@ -24,6 +27,9 @@ function newQuote(){
    let index = Math.floor(Math.random() * apiQuotes.length);
    let quote = apiQuotes[index].text;
    let author = apiQuotes[index].author;
+
+   quoteText.textContent = quote;
+   quoteAuthor.textContent = author;
    
 
 
