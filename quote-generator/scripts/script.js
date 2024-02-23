@@ -28,11 +28,18 @@ function newQuote(){
    let quote = apiQuotes[index].text;
    let author = apiQuotes[index].author;
 
-   quoteText.textContent = quote;
-   quoteAuthor.textContent = author;
-   
+   displayQuote(quote);
+   displayAuthor(author);
+}
 
+/**display quote */
+function displayQuote(quote){
+    quoteText.textContent = quote;
+}
 
+/**display author */
+function displayAuthor(author){
+    quoteAuthor.textContent = author;
 }
 
 //Event listener
